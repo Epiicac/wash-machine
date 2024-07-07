@@ -1,0 +1,170 @@
+.mainbanner-block .mainbanner {
+    height: 795px;
+}
+.mainbanner-block .mainbanner .swiper-slide {
+    position: relative;
+    height: auto;
+}
+.mainbanner-block .mainbanner .swiper-slide:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 7em;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content.center {
+    justify-content: center;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content.left {
+    align-items: flex-start;
+    justify-content: center;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content.image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content.video video {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+}
+.slide-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    width: 100%;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content h2,
+.mainbanner-block .mainbanner .swiper-slide .slider-content h3 {
+    position: relative;
+    color: rgb(255, 255, 255);
+    line-height: 100%;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom: 24px;
+    opacity: 1;
+    z-index: 2;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content h2 {
+    font-size: 50px;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content.center h2,
+.mainbanner-block .mainbanner .swiper-slide .slider-content.center h3 {
+    text-align: center;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content p {
+    position: relative;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0px;
+    line-height: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 12px;
+    opacity: 1;
+    z-index: 2;
+}
+.mainbanner-block .mainbanner .swiper-slide .slider-content.center p {
+    text-align: center;
+}
+.mainbanner-block .arrow-holder .arrow-left {
+    transform: translateX(20px);
+}
+.mainbanner-block .arrow-holder .arrow-right {
+    transform: translateX(-20px);
+}
+.mainbanner-block .swiper-pagination {
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.mainbanner-block .swiper-pagination .swiper-pagination-bullet {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #e1e1e1;
+    border: 3px solid #FFFFFF;
+    cursor: pointer;
+    opacity: 1;
+    transition: .1s ease-out;
+}
+.mainbanner-block .swiper-pagination .swiper-pagination-bullet:hover {
+    background: #484848;
+}
+.mainbanner-block .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #484848;
+}
+.mainbanner-btn {
+    position: relative;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    border-radius: 8px;
+    background-color: #c8102e;
+    padding: 15px 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 2;
+    margin-top: 12px;
+}
+@media screen and (max-width: 991px) {
+    .mainbanner-block .mainbanner {
+        height: 500px;
+    }
+    .slide-info {
+        max-width: 75%;
+    }
+    .mainbanner .arrow-holder {
+        height: 30px;
+    }
+    .mainbanner .arrow-holder .swiper-arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .slide-info {
+        max-width: 100%;
+    }
+    .mainbanner-block .mainbanner .swiper-slide .slider-content {
+        padding: 4em;
+    }
+    .mainbanner-block .mainbanner .swiper-slide .slider-content h2,
+    .mainbanner-block .mainbanner .swiper-slide .slider-content h3 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    .mainbanner-block .mainbanner .swiper-slide .slider-content p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}
+@media screen and (max-width: 582px) {
+    .mainbanner .arrow-holder {
+        top: auto;
+        transform: none;
+        bottom: 24px;
+    }
+    .mainbanner-block .mainbanner .swiper-slide .slider-content {
+        padding: 1em;
+    }
+}

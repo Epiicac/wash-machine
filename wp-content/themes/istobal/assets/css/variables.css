@@ -1,0 +1,50 @@
+:root {
+	/* Colors */
+	--royal-red-color: #ff2000;
+	--sail-color: #fdbebe;
+	--nore-color: #ffffff;
+	--haiti-color: #07071C;
+	--raven-color: #747B8B;
+	--french-gray-color: #B9BDC5;
+	--athens-gray-color: #F9F9FB;
+	--ebony-clay-color: #282C3A;
+	--black-color: #000000;
+}
+@media screen and (min-width: 1208px) {
+	:root {
+
+		--subtitle-size: 18px;
+		--normal-size: 17px;
+		--h2-size: 44px;
+		--accent2-size: 32px;
+		--accent3-size: 24px;
+
+		--container-padding: 32px;
+	}
+}
+
+@media screen and (max-width: 1208px) {
+	:root {
+
+		--subtitle-size: 18px;
+		--normal-size: 17px;
+		--h2-size: 44px;
+		--accent2-size: 32px;
+		--accent3-size: 24px;
+
+		--container-padding: 32px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	:root {
+
+		--subtitle-size: 16px;
+		--normal-size: 14px;
+		--h2-size: 30px;
+		--accent2-size: 22px;
+		--accent3-size: 22px;
+	
+		--container-padding: 12px;
+	}
+}
