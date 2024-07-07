@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="breadcrumbs first">
     <?php
-    if(function_exists('bcn_display')) {
+    if (function_exists('bcn_display')) {
         bcn_display();
     }
     ?>
@@ -27,15 +27,22 @@ $args = array(
     'post_type' => 'catalog',
 );
 
-$query = new WP_Query( $args );
+$query = new WP_Query($args);
 
-if ( $query->have_posts() ) {
-
-    echo "This is all posts:<br>";
-    while ( $query->have_posts() ) {
-        $query->the_post();
-        echo '<a href="'.get_permalink().'">ID поста: ' . get_the_ID() . '<a/><br>';
-    }
+if ($query->have_posts()) {
+    echo "This is all posts:<br>"; ?>
+    <div class="catalog-list">
+        <?php
+        while ($query->have_posts()) {
+            $query->the_post();
+            $desc = get_field('desc'); ?>
+            <div class="catalog-item">
+                <img src="<?= get_the_post_thumbnail_url() ?>" alt="">
+                <a href="<?= get_permalink() ?>"><?= get_the_title() ?></a>
+                <span class="desc"><?= $desc ?></span>
+            </div>
+        <?php } ?>
+    </div> <?php
 } else {
     echo "no posts";
 }
