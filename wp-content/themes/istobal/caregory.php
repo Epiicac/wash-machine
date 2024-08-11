@@ -12,7 +12,7 @@
                                          src="/wp-content/themes/istobal/assets/img/Automatic_car_wash_ISTOBAL_1.jpg"
                                          alt=""></div>
         <div class="page-title-wrapper">
-            <h1 class="page-title" id="page-title-heading">Каталог</h1>
+            <h1 class="page-title" id="page-title-heading"><?= get_the_category() ?></h1>
         </div>
         <div class="category-description">
             Get to know the wide range of ISTOBAL vehicle washes for all types of vehicles. State-of-the-art solutions
