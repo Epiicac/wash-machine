@@ -18,11 +18,17 @@
                         'taxonomy' => $taxonomy,
                         'hide_empty' => false, // Установите в true, если вы хотите скрыть пустые категории
                     ));
-
+                    if (is_tax()) {
+                        $current_taxonomy = get_queried_object();
+                    }
                     if (!empty($categories) && !is_wp_error($categories)) {
                         foreach ($categories as $category) {
                             if ($category->parent == 0) {
-                                echo '<li><a href="' . get_term_link($category) . '">' . $category->name . '</a></li>';
+                                if ($current_taxonomy->name == $category->name) {
+                                    echo '<li><a class="active" href="' . get_term_link($category) . '">' . $category->name . '</a></li>';
+                                } else {
+                                    echo '<li><a href="' . get_term_link($category) . '">' . $category->name . '</a></li>';
+                                }
                             }
                         }
                     }

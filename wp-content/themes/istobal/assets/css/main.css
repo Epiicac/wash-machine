@@ -361,6 +361,17 @@ a {
     text-decoration: none;
 }
 
+.catalog .left-menu a.active:before {
+    content: url("../img/main_menu_active.png");
+    width: 7px;
+    height: 11px;
+}
+.catalog .left-menu a.active {
+    color: #c8102e;
+    display: flex;
+    gap: 5px;
+    margin-left: -5px;
+}
 .catalog .menu_title {
     text-align: center;
     text-transform: uppercase;
